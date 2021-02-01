@@ -1,14 +1,11 @@
-version: '2'
+version: '3.9'
 
 services:
   nginx-proxy:
     image: jwilder/nginx-proxy
+    container_name: nginx_proxy
+    restart: unless-stopped
     ports:
-      - "80:80"
+      - '80:80'
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-
-  whoami:
-    image: jwilder/whoami
-    environment:
-      - VIRTUAL_HOST=whoami.local
