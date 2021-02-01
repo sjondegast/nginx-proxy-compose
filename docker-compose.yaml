@@ -5,7 +5,13 @@ services:
     image: jwilder/nginx-proxy
     container_name: nginx_proxy
     restart: unless-stopped
+    networks:
+      - nginx-proxy
     ports:
       - '80:80'
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+networks:
+  default:
+    external:
+      name: nginx-proxy
