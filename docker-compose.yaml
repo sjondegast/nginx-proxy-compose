@@ -5,8 +5,6 @@ services:
     image: jwilder/nginx-proxy
     container_name: nginx_proxy
     restart: unless-stopped
-    networks:
-      - nginx-proxy
     ports:
       - '80:80'
     volumes:
