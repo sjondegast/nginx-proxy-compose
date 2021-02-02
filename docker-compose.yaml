@@ -17,7 +17,7 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nginx.tmpl:/etc/docker-gen/templates/nginx.tmpl
 
-  whoami:
-    image: jwilder/whoami
-    environment:
-      - VIRTUAL_HOST=whoami.local
+  # whoami:
+  #   image: jwilder/whoami
+  #   environment:
+  #     - VIRTUAL_HOST=whoami.local
