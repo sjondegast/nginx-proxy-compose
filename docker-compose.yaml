@@ -4,7 +4,7 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     container_name: nginx_proxy
-    # hostname: 'homelab'
+    hostname: 'homelab'
     restart: unless-stopped
     networks:
       - nginx-proxy
