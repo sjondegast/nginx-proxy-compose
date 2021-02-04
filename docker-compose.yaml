@@ -11,9 +11,7 @@ services:
       - '80:80'
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      # - ./config/vhost.d:/etc/nginx/vhost.d
-    environment:
-      DEFAULT_HOST: homelab
+      - ./config/vhost.d:/etc/nginx/vhost.d
 
 networks:
   nginx-proxy:
