@@ -3,7 +3,7 @@ version: '3.9'
 services:
   nginx-proxy:
     image: jwilder/nginx-proxy
-    container_name: nginx_proxy
+    container_name: nginx-proxy
     restart: unless-stopped
     networks:
       - nginx-proxy
@@ -11,7 +11,7 @@ services:
       - '80:80'
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./config/vhost.d:/etc/nginx/vhost.d
+      # - ./config/vhost.d:/etc/nginx/vhost.d
 
 networks:
   nginx-proxy:
